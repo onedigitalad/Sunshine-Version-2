@@ -17,9 +17,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        //abortOnError false
+    }
 }
+repositories {
+    maven { url 'file://tmp/myRepo/' }
+    //  maven { url 'file://localhost/tmp/myRepo/' }
+}
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.2'
+
+    //Dependencies for OneDigitalAd Analytics if reading AdvertiserId
+    compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'com.google.android.gms:play-services-analytics:7.5.0'
+    compile 'com.google.android.gms:play-services-base:7.5.0'
+    //OneDigitalAd Analytics
+    compile 'com.oda.sdk:oda-tracking-sdk:+@aar'
+
 }
+
+
