@@ -23,8 +23,7 @@ android {
     }
 }
 repositories {
-    maven { url 'file://tmp/myRepo/' }
-    //  maven { url 'file://localhost/tmp/myRepo/' }
+    maven { url 'https://github.com/onedigitalad/oda-sdk-Android-Releases/raw/master/AndroidStudio/' }
 }
 
 
